@@ -19,7 +19,9 @@
     {% trans 'Backup tokens have been generated, but are not revealed here for security reasons. Press the button below to generate new ones.' %}
   {% endif %}
 {% else %}
-  {% trans 'No tokens. Press the button below to generate some.' %}
+<ul>
+  <li>{% trans 'No tokens. Press the button below to generate some.' %}</li>
+</ul>
 {% endif %}
 
 <form method="post">
