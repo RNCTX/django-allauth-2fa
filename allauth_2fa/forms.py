@@ -16,6 +16,7 @@ class TOTPAuthenticateForm(OTPAuthenticationFormMixin, forms.Form):
             'autofocus': 'autofocus',
             'autocomplete': 'off',
             'inputmode': 'numeric',
+            'class': 'form-control'
         })
         self.user = user
 
@@ -31,7 +32,7 @@ class TOTPDeviceForm(forms.Form):
 
     def __init__(self, user, metadata=None, **kwargs):
         super(TOTPDeviceForm, self).__init__(**kwargs)
-        self.fields['token'].widget.attrs.update({'autofocus': 'autofocus'})
+        self.fields['token'].widget.attrs.update({'autofocus': 'autofocus', 'class': 'form-control'})
         self.user = user
         self.metadata = metadata or {}
 
