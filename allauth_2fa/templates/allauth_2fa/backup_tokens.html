@@ -22,11 +22,12 @@
 
 <form method="post">
   {% csrf_token %}
+  <br />
   <button class="primaryAction btn btn-primary" type="submit">
     {% trans 'Generate backup tokens' %}
   </button>
 </form>
-
+<br />
 <a href="{% url 'two-factor-remove' %}">Disable Two Factor</a>
 
 {% endblock %}
